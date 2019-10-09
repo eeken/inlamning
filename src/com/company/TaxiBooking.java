@@ -92,7 +92,10 @@ public class TaxiBooking implements Serializable {
 
         Customer customer = new Customer(name, destination, price);
         customers.add(customer);
-        objectIO.WriteObjectToFile("customerlist.txt", customers);
+        System.out.println("Do you want to save customer information on file? (Y/N)");
+        if(input.next().equalsIgnoreCase("Y")){
+            objectIO.WriteObjectToFile("customerlist.txt", customers);
+        }
     }
 
     public void removeCustomer(){
@@ -114,9 +117,11 @@ public class TaxiBooking implements Serializable {
     }
 
     public void showAllCustomers(){
-
-        customers = (ArrayList<Customer>) objectIO.ReadObjectFromFile("customerlist.txt");
-
+        Scanner input = new Scanner(System.in);
+        System.out.println("Do you want to read customer information from file? (Y/N)");
+        if(input.nextLine().equalsIgnoreCase("Y")) {
+            customers = (ArrayList<Customer>) objectIO.ReadObjectFromFile("customerlist.txt");
+        }
         //Collections.sort(customers);
         if (customers == null || customers.size() < 1) {
             System.out.println("There are no customers!");
