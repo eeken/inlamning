@@ -127,6 +127,7 @@ public class TaxiBooking implements Serializable {
             System.out.println("There are no customers!");
             customers = new ArrayList<>();
         } else {
+            Collections.sort(customers);
             System.out.println(customers);
         }
     }
@@ -188,6 +189,7 @@ public class TaxiBooking implements Serializable {
 
         Car car = new Car(brand, year, price);
         cars.add(car);
+        System.out.println("The car has been entered into the system.");
     }
 
     public void showAllCars(){

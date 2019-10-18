@@ -10,5 +10,6 @@ public class Main implements Serializable {
         TaxiBooking taxiBooking = new TaxiBooking();
 
         taxiBooking.showMainMenu();
+
     }
 }

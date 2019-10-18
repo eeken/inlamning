@@ -14,7 +14,7 @@ public class FileUtils {
             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
             objectOut.writeObject(serObj);
             objectOut.close();
-            System.out.println("The Object  was succesfully written to a file");
+            System.out.println("The information was succesfully written to a file");
 
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -30,7 +30,7 @@ public class FileUtils {
 
             Object obj = objectIn.readObject();
 
-            System.out.println("The Object has been read from the file");
+            System.out.println("The information has been read from the file");
             objectIn.close();
             return obj;
 
