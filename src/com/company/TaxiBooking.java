@@ -8,6 +8,18 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * <h1>Lunda Taxi</h1>
+ * The TaxiBooking Program lets you book fares on a taxi system. You can also add employees and many other functions as well.
+ * <p>
+ *
+ *
+ *
+ * @author  Ola Wiebe
+ * @version 1.0
+ * @since   20191021
+ */
+
 public class TaxiBooking implements Serializable {
 
     private ArrayList<Employee> employees = new ArrayList<>();
