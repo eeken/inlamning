@@ -195,9 +195,11 @@ public class TaxiBooking implements Serializable {
         System.out.println("Enter brand of  car: ");
         String brand = input.nextLine();
         System.out.println("Enter year of manufacture: ");
-        int year = input.nextInt();
+        String yearAsString = input.nextLine();
+        int year = Integer.parseInt(yearAsString);
         System.out.println("Enter price of car: ");
-        int price = input.nextInt();
+        String priceAsString = input.nextLine();
+        int price = Integer.parseInt(priceAsString);
 
         Car car = new Car(brand, year, price);
         cars.add(car);
@@ -214,6 +216,10 @@ public class TaxiBooking implements Serializable {
             }
         }
 
+    }
+
+    public ArrayList<Car> getAllCars(){
+        return cars;
     }
 
 

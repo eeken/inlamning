@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.Comparator;
 
 /**
- *  <p>The Customer class contains a constructor to create a class and also some return functions.</p>
+ *  <p>The Customer class contains a constructor to create a customer and also some return functions.</p>
  *
  *  @author  Ola Wiebe
  *  @version 1.0
@@ -31,7 +31,7 @@ public class Customer extends Person implements Comparable<Customer>, Serializab
     }
 
     /**
-     * Make the customer to a String
+     * Make the customer object to a String
      * @return a String that describes the customer
      */
     public String toString(){
