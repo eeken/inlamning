@@ -35,7 +35,7 @@ public class Customer extends Person implements Comparable<Customer>, Serializab
      * @return a String that describes the customer
      */
     public String toString(){
-        return ("Name: " + super.getName()) + ", Destination: " + destination;
+        return ("Name: " + super.getName()) + ", Destination: " + destination + ", Price for fare: " + price;
     }
 
     /**

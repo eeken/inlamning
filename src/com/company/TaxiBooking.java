@@ -34,9 +34,9 @@ public class TaxiBooking implements Serializable {
         String menuChoice;
 
         do {
-            System.out.println("--------------------------" +
-                    "\nWelcome to Lunda Taxi! \n" +
-                    "-------------------------- \n" +
+            System.out.println("--------------------------      .---.\n" +
+                    "Welcome to Lunda Taxi!     .----'   '--.\n" +
+                    "-------------------------- '-()-----()-'\n" +
                     "1. Add new taxi customer \n" +
                     "2. Add new employee \n" +
                     "3. Add new car \n" +
@@ -111,20 +111,23 @@ public class TaxiBooking implements Serializable {
     }
 
     public void removeCustomer(){
+        int i = 0;
         Scanner input = new Scanner(System.in);
         if(customers.size()<1){
             System.out.println("There are no customers!");
         } else{
-            System.out.println("Which customer ID do you want to delete?");
-            int id = input.nextInt();
-            try {
-                customers.remove(id);
-                System.out.println("You have deleted customer nr " + id + " from the system!");
-            }
-            catch(Exception e) {
-                //  Block of code to handle errors
-                System.out.println("There is no customer with id nr " + id + " in the system");
-            }
+            do {
+                System.out.println("Which customer ID do you want to delete?");
+                int id = input.nextInt();
+                try {
+                    customers.remove(id);
+                    System.out.println("You have deleted customer nr " + id + " from the system!");
+                    i = 1;
+                } catch (Exception e) {
+                    //  Block of code to handle errors
+                    System.out.println("There is no customer with id nr " + id + " in the system");
+                }
+            }while(i != 1);
         }
     }
 
@@ -140,7 +143,9 @@ public class TaxiBooking implements Serializable {
             customers = new ArrayList<>();
         } else {
             Collections.sort(customers);
-            System.out.println(customers);
+            for(Customer customer : customers){
+                System.out.println(customer);
+            }
         }
     }
 
